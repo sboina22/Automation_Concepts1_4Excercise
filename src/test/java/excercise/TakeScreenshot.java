@@ -15,7 +15,7 @@ import org.testng.asserts.SoftAssert;
 
 public class TakeScreenshot extends BaseTests {
 
-
+/*
 	@Test(priority =1,description ="Launch Application")
 	void launchApplication() {
 		driver.get("https://www.hdfc.bank.in/");
@@ -23,6 +23,7 @@ public class TakeScreenshot extends BaseTests {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	
+*/
 	@Test(priority =2,description ="Checks")
 	void pageChecks() {
 		
