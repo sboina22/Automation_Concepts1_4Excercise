@@ -46,6 +46,7 @@ public class BrokenLinks {
 				URL linkuRL = new URL(href); // convert href value from String to URL object
 				HttpURLConnection connection = (HttpURLConnection) linkuRL.openConnection(); // Open connection to the
 																								// server
+				connection.setRequestMethod("HEAD"); // Optional optimization: faster than GET
 				connection.connect();// Connect to the server
 
 				int code = connection.getResponseCode();
@@ -63,11 +64,12 @@ public class BrokenLinks {
 					System.out.println(textlink + " Valid link.====>>  " + href + "  - The response code &  message  : " + code
 							+ " -  " + resMessage);
 				}
+				connection.disconnect();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			
 		}
+		
 		System.out.println("Number of broken links ===>  " + brokenlinkcount);
 		
 		driver.close();

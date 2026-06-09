@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,17 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="excercise.TakeScreenshot" class="method navigator-link" hash-for-method="launchApplication">launchApplication</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="excercise.TakeScreenshot" class="method navigator-link" hash-for-method="pageChecks">pageChecks</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="excercise.TakeScreenshot" class="method navigator-link" hash-for-method="takeScreenshot">takeScreenshot</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="excercise.Misc_Tooltip" class="method navigator-link" hash-for-method="tooltip">tooltip</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -131,34 +121,16 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">excercise.TakeScreenshot</span>
+              <span class="class-name">excercise.Misc_Tooltip</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="launchApplication">
-                  </a> <!-- launchApplication -->
-                  <span class="method-name">launchApplication</span>
+                  <a name="tooltip">
+                  </a> <!-- tooltip -->
+                  <span class="method-name">tooltip</span>
                   <em>
-(Launch Application)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="pageChecks">
-                  </a> <!-- pageChecks -->
-                  <span class="method-name">pageChecks</span>
-                  <em>
-(Checks)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="takeScreenshot">
-                  </a> <!-- takeScreenshot -->
-                  <span class="method-name">takeScreenshot</span>
-                  <em>
-(Take screenshot)                  </em>
+(tooltip)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -166,7 +138,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/tl/30wl89k97gd1h0fp22y7k7x00000gn/T/testng-eclipse--278902879/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/tl/30wl89k97gd1h0fp22y7k7x00000gn/T/testng-eclipse-638639009/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -175,7 +147,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;excercise.TakeScreenshot&quot;/&gt;
+      &lt;class name=&quot;excercise.Misc_Tooltip&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -215,24 +187,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'launchApplication')
-data.setCell(0, 2, 'excercise.TakeScreenshot')
-data.setCell(0, 3, 2921);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'takeScreenshot')
-data.setCell(1, 2, 'excercise.TakeScreenshot')
-data.setCell(1, 3, 312);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'pageChecks')
-data.setCell(2, 2, 'excercise.TakeScreenshot')
-data.setCell(2, 3, 26);
+data.setCell(0, 1, 'tooltip')
+data.setCell(0, 2, 'excercise.Misc_Tooltip')
+data.setCell(0, 3, 168);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 168 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -258,27 +222,19 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">excercise.TakeScreenshot</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
+              <div class="chronological-class-name">excercise.Misc_Tooltip</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
                 <span class="method-name">launchBrowser</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
+              </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">launchApplication</span>
-                <span class="method-start">1226 ms</span>
+                <span class="method-name">tooltip</span>
+                <span class="method-start">6423 ms</span>
               </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">pageChecks</span>
-                <span class="method-start">4149 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">takeScreenshot</span>
-                <span class="method-start">4177 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-suite after">
+              <div class="configuration-test after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">4504 ms</span>
-              </div> <!-- configuration-suite after -->
+                <span class="method-start">6593 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
