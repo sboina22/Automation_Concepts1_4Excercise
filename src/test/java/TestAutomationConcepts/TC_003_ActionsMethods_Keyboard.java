@@ -11,13 +11,13 @@ import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TC_003_ActionsMethods {
+public class TC_003_ActionsMethods_Keyboard {
 
 	public static void main(String[] args) {
 
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-		//driver.manage().deleteAllCookies();
+		// driver.manage().deleteAllCookies();
 		driver.get("https://rahulshettyacademy.com/client/#/auth/register");
 		driver.manage().window().maximize();
 		String pgTitle = driver.getTitle();
@@ -48,7 +48,6 @@ public class TC_003_ActionsMethods {
 		 * rbtnFemale.isSelected());
 		 * System.out.println("'I am 18 year or Older' is selected  : "+
 		 * rbtnFemale.isSelected());
-		 * 
 		 * 
 		 * btnRegister.submit();
 		 * 
@@ -82,21 +81,22 @@ public class TC_003_ActionsMethods {
  *** 
  * 
  * Using Select Methods - selectByIndex(), selectByVisibleText(),
- * selectByValue(), getFirstSelectedOption(), getOptions() 
- * WebElement drpCurrency = driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency")); 
- * Select clsdrpCurrency = new Select(drpCurrency);
- * clsdrpCurrency.selectByIndex(2); 
+ * selectByValue(), getFirstSelectedOption(), getOptions() WebElement
+ * drpCurrency =
+ * driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency")); Select
+ * clsdrpCurrency = new Select(drpCurrency); clsdrpCurrency.selectByIndex(2);
  * clsdrpCurrency.selectByVisibleText("USD");
  * clsdrpCurrency.selectByValue("INR");
- * System.out.println("The selected option : " + clsdrpCurrency.getFirstSelectedOption().getText());
+ * System.out.println("The selected option : " +
+ * clsdrpCurrency.getFirstSelectedOption().getText());
  */
 
 /*
- * txtUsername.clear(); 
- * txtUsername.sendKeys("sboina29"); 
- * Actions act = new Actions(driver);
- * act.keyDown(Keys.COMMAND).sendKeys("a").sendKeys("c").keyUp(Keys.COMMAND).build().perform(); 
- * act.sendKeys(Keys.TAB).perform();
- * act.keyDown(Keys.COMMAND).sendKeys("v").keyUp(Keys.COMMAND).build().perform(); 
- * System.out.println("The name entered into First Name  : "+ txtFirstname.getAttribute("value"));
+ * txtUsername.clear(); txtUsername.sendKeys("sboina29"); Actions act = new
+ * Actions(driver);
+ * act.keyDown(Keys.COMMAND).sendKeys("a").sendKeys("c").keyUp(Keys.COMMAND).
+ * build().perform(); act.sendKeys(Keys.TAB).perform();
+ * act.keyDown(Keys.COMMAND).sendKeys("v").keyUp(Keys.COMMAND).build().perform()
+ * ; System.out.println("The name entered into First Name  : "+
+ * txtFirstname.getAttribute("value"));
  */

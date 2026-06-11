@@ -38,7 +38,7 @@ public class TC_004_Alerts {
 		driver.findElement(By.id("promptBox")).click();
 		Thread.sleep(3000);
 		Alert promptalert = driver.switchTo().alert();
-		String  alrtMsg3 = promptalert.getText();
+		String  alrtMsg3 = promptalert.getText(); //getText();
 		System.out.println("Alert Message ==> " + alrtMsg3);
 		promptalert.sendKeys("Boina"); //sendKeys();
 		promptalert.accept();

@@ -17,21 +17,21 @@ public class TC_005_WindowHandles {
 		driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		String parentWindowHandle = driver.getWindowHandle();
+		
+		String parentWindowHandle = driver.getWindowHandle(); //getWindowHandle()
 		System.out.println("ParentWindow Handle ==> " + parentWindowHandle);
 		System.out.println("ParentWindow Title ==> " + driver.getTitle());
 
 		driver.findElement(By.xpath("//*[@id='newWindowBtn']")).click();
 
-		Set<String> childWindowHandles = driver.getWindowHandles(); // Includes parent window
+		Set<String> childWindowHandles = driver.getWindowHandles(); // /getWindowHandles() Includes parent window
 
 		// To exclude parent window and work on only child windows
+		for (String childWindowhandle : childWindowHandles) {
 
-		for (String childWindow : childWindowHandles) {
+			if (!childWindowhandle.equals(parentWindowHandle)) {
 
-			if (!childWindow.equals(parentWindowHandle)) {
-
-				driver.switchTo().window(childWindow);
+				driver.switchTo().window(childWindowhandle); // switchTo.Window()
 				System.out.println("ChildWindow Title ==> " + driver.getTitle());
 				//Child window code here ..
 				driver.close(); // Closes the current child window
