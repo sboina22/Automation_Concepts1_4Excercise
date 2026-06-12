@@ -27,6 +27,7 @@ public class BrokenLinks {
 		System.out.println("Number of links in page ===> " + links.size()); //size()
 		
 		int brokenlinkcount =0 ;
+		int validlinkcount=0;
 		
 		for (WebElement element : links) {
 			String href = element.getAttribute("href");
@@ -63,6 +64,8 @@ public class BrokenLinks {
 				} else {
 					System.out.println(textlink + " Valid link.====>>  " + href + "  - The response code &  message  : " + code
 							+ " -  " + resMessage);
+					validlinkcount++;
+					
 				}
 				connection.disconnect();
 			} catch (IOException e) {
@@ -70,11 +73,11 @@ public class BrokenLinks {
 			}
 		}
 		
-		System.out.println("Number of broken links ===>  " + brokenlinkcount);
-		
+		System.out.println("\n=================================");
+		System.out.println("FINAL Count of broken links ==> "+brokenlinkcount);
+		System.out.println("FINAL Count of valid links ==> "+validlinkcount);
+
 		driver.close();
 
 	}
-
-	
 }

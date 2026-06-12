@@ -7,12 +7,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TC_004_Alerts {
+//JavaScript Alerts!!
+
+public class TC_004_Alerts_JavaScript {
 
 	public static void main(String[] args) throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-		
+
 	/*	driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		driver.manage().window().maximize();
 		
@@ -31,7 +33,8 @@ public class TC_004_Alerts {
 		Thread.sleep(3000);
 		driver.switchTo().alert().dismiss(); // accept(), dismiss()
 		
-		*/
+			*/
+		
 		//Prompt Alert - Input Text box , buttons
 		
 		driver.get("https://www.hyrtutorials.com/p/alertsdemo.html");
@@ -44,8 +47,8 @@ public class TC_004_Alerts {
 		promptalert.accept();
 		String msgbox = driver.findElement(By.id("output")).getText();
 		System.out.println("Alert Message ==> " + msgbox);
-		
-		driver.close();
+
+
 	}
 
 }

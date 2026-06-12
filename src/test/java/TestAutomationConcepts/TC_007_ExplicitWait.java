@@ -20,13 +20,18 @@ public class TC_007_ExplicitWait {
 		driver.navigate().to("https://www.ebay.com/");
 		driver.manage().window().maximize();
 			
-		Actions act = new Actions(driver);
-		WebElement elmElectronicsMenu = driver.findElement(By.xpath("//*[@id=\"vl-flyout-nav\"]/ul/li[4]/a"));
-		act.moveToElement(elmElectronicsMenu).perform();
+		driver.findElement(By.xpath("//*[@id='gh-ac']")).sendKeys("Electronics");
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(null)));
+		WebElement btnSearch = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='gh-search-btn']")));
+		
+		btnSearch.click();
+		
+		driver.close();
 	}
 
+	
+	
+	
 }
