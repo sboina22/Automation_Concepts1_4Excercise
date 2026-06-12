@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TC_008_Coockies {
+public class TC_011_Coockies {
 
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();

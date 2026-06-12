@@ -7,25 +7,31 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TC_007_ImplicitlyWait {
+public class TC_008_ExplicitWait {
 
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.navigate().to("https://www.ebay.com/");
 		driver.manage().window().maximize();
+			
+		driver.findElement(By.xpath("//*[@id='gh-ac']")).sendKeys("Electronics");
 		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); // Implicit Wait: Directs the WebDriver to wait for a specified duration for elements to appear before throwing a NoSuchElementException. Applicable for all elements in the script.
-	
-		Actions act = new Actions(driver);
-		WebElement elmElectronicsMenu = driver.findElement(By.xpath("//*[@id=\"vl-flyout-nav\"]/ul/li[4]/a"));
-		act.moveToElement(elmElectronicsMenu).perform();
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		
-	
+		WebElement btnSearch = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='gh-search-btn']")));
 		
+		btnSearch.click();
+		
+		driver.close();
 	}
 
+	
+	
+	
 }

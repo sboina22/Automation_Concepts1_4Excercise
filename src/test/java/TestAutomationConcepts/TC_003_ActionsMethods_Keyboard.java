@@ -76,9 +76,6 @@ public class TC_003_ActionsMethods_Keyboard {
  * act.keyDown(Keys.CONTROL).sendKeys("v").build().perform(); Control - Windows;
  * Command - MacOS
  **** 
- * Navigate Methods **** driver.navigate().to(pgURL); driver.navigate().back();
- * driver.navigate().forward(); driver.navigate().refresh();
- *** 
  * 
  * Using Select Methods - selectByIndex(), selectByVisibleText(),
  * selectByValue(), getFirstSelectedOption(), getOptions() WebElement
