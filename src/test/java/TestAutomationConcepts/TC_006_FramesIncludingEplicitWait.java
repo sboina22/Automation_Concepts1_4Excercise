@@ -68,6 +68,11 @@ public class TC_006_FramesIncludingEplicitWait {
 
 		System.out.println("I am from Textbox in Main Page after switch back to main / default content  ==> " + txtUpdated);
 		
+		// 3. Nested frames
+		driver.switchTo().frame("frameNameOrIdorIndexorWebElement"); // Switch to a frame using its Name, ID, Index, or WebElement
+		driver.switchTo().parentFrame();         // Switch to the immediate parent frame (one level back)
+		driver.switchTo().defaultContent();      // Switch completely out of all frames back to the main/top-level page
+		
 		//driver.close();
 
 	}
