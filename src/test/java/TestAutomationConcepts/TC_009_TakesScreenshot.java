@@ -25,14 +25,15 @@ public class TC_009_TakesScreenshot {
 
 		//Take screenshot - Full page
 		TakesScreenshot ts = (TakesScreenshot) driver;
-		File sourcefileFullscreen = ts.getScreenshotAs(OutputType.FILE); //getScreenshotAs() on driver
+		File sourcefileFullscreen = ts.getScreenshotAs(OutputType.FILE); //getScreenshotAs() method call from TakesScreenshot Interface / on driver
 		File targetfileFullscreen = new File("./Screenshots/FullPageImage1.png");
 		FileUtils.copyFile(sourcefileFullscreen, targetfileFullscreen);
 		
 		//Take screenshot - Section / portion / element of the page
 		WebElement btnSearch = driver.findElement(By.xpath("//*[@id='gh-search-btn']"));
-		File sourcefilebtnSearch = btnSearch.getScreenshotAs(OutputType.FILE); // getScreenshotAs() on WebElement
-		File targetfileElementSection = new File("./Screenshots/ElementSectionImage1.png");
+		File sourcefilebtnSearch = btnSearch.getScreenshotAs(OutputType.FILE); // //getScreenshotAs() method call from WebElement Interface, getScreenshotAs() on WebElement
+		//File targetfileElementSection = new File("./Screenshots/ElementSectionImage1.png");
+		File targetfileElementSection = new File(System.getProperty("user.dir")+"//Screenshots//ElementSectionImage1.png");
 		FileUtils.copyFile(sourcefilebtnSearch, targetfileElementSection);
 		
 		driver.close();
