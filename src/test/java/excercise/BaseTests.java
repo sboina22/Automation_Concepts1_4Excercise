@@ -20,16 +20,18 @@ public class BaseTests {
 	@BeforeTest
 	public void launchBrowser() throws IOException {
 
-		// load config.properties file; FileInputStream / FileReader class to read the
-		// files.
-		FileInputStream fis = new FileInputStream("./src//test//resources//config.properties");// Load the file and read
-																								// the values from the
-																								// variables from the
-																								// Base class.
+		// Load the config.properties file using FileInputStream or FileReader to read the file contents
+		
+		// Load the config.properties file using FileInputStream to read the file contents
+		FileInputStream fis = new FileInputStream("./src//test//resources//config.properties");
+		
+		// Load the properties into the prop object to read the key-value pairs
 		prop.load(fis);
 
+		// Retrieve configuration values using their respective keys
 		String br = prop.getProperty("browsername");
 		String url = prop.getProperty("url");
+		
 		System.out.println("Browser Name from BaseTests ==>   "+br);
 		System.out.println("URL from BaseTests ==>   "+url);
 
