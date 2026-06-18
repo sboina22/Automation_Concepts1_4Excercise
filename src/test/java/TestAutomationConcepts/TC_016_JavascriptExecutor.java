@@ -16,7 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
-import Utilitie.JavascriptExecutorUtilities;
+import Utilities.JavascriptExecutorUtilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TC_016_JavascriptExecutor {

@@ -38,7 +38,7 @@ public class TC_003_ActionsMethods_Mouse {
 		act.doubleClick(elmElectronicsMenu).perform();
 		
 		//Drag And Drop ==> dragAndDrop();
-		act.dragAndDrop(WebElement source, WebElement target).perform();
+		//act.dragAndDrop(WebElement source, WebElement target).perform();
 	
 	}
 
