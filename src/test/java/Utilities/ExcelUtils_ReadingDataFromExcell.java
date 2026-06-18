@@ -7,18 +7,12 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.testng.annotations.Test;
 
-public class ExcelUtils {
-	/*
-	//Create a constructor with the same class name, when ever wants to use methods of the class, pass the parameter, say file and start use of methods
-	public ExcelUtils(file){
-		this.file = file;
-	}
-	*/
-	
-	@Test
-	void ReadingDataFromExcell() throws IOException {
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class ExcelUtils_ReadingDataFromExcell {
+
+	public static void main(String[] args) throws IOException {
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/TestData/SpiceClub.xlsx");
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		XSSFSheet sheet = workbook.getSheet("SignUp");
@@ -40,4 +34,3 @@ public class ExcelUtils {
 		fis.close();
 	}
 }
-

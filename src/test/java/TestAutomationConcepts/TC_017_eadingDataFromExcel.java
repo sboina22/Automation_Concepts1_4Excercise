@@ -1,4 +1,4 @@
-package Utilities;
+package TestAutomationConcepts;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
-public class ReadingDataFromExcel {
+public class TC_017_eadingDataFromExcel {
 
 	public static void main(String[] args) throws IOException {
 		
