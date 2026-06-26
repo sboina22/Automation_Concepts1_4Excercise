@@ -11,16 +11,74 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtills {
 
-	
 	public static FileInputStream fis;
 	public static XSSFWorkbook workbook;
 	public static XSSFSheet worksheet;
 	public static XSSFRow row;
 	public static XSSFCell cell;
 	
-	public static int getRowCount(String xlfile, String sheet) throws IOException {
+	String path;
+	public ExcelUtills(String path){
+		this.path = path;
+	}
+	
+// * NOTE: If you prefer not to use a constructor to initialize the file path, you can use this alternative static method by explicitly passing the Excel file path ('xlfile') as a parameter.
 		
+//	public static int getRowCount(String xlfile, String sheet) throws IOException {}
+		 
+	
+		public int getRowCount(String sheet) throws IOException{
+		
+		fis =new FileInputStream(path);
+		workbook = new XSSFWorkbook(fis);
+		worksheet = workbook.getSheet(sheet);
+		int rowcount =worksheet.getLastRowNum();
+		workbook.close();
+		fis.close();
+		return rowcount;
+	
+	}
+
+	public int getCellCount(String sheet, int rownum) throws IOException{
+		
+		fis = new FileInputStream(path);
+		workbook = new XSSFWorkbook(fis);
+		worksheet= workbook.getSheet(sheet);
+		row = worksheet.getRow(rownum);
+		int columncount = row.getLastCellNum();
+		workbook.close();
+		fis.close();
+		return columncount;
+
+	}
+	
+	
+	public String getCellData(String sheet, int rownum, int celnum) throws IOException{
+		
+		fis = new FileInputStream(path);
+		workbook =new XSSFWorkbook(fis);
+		worksheet = workbook.getSheet(sheet);
+		row= worksheet.getRow(rownum);
+		cell = row.getCell(celnum);
+		DataFormatter formatter = new DataFormatter();
+		
+		String data;
+		
+		data = formatter.formatCellValue(cell);
+		workbook.close();
+		fis.close();
+		return data;	
+	
+	}
+
+	
+	/*
+	 * NOTE: If you prefer not to use a constructor to initialize the file path, you can use this alternative static method by explicitly passing the Excel file path ('xlfile') as a parameter.
+	
+		public static int getRowCount(String xlfile, String sheet) throws IOException {
+	
 		fis = new FileInputStream(xlfile);
+	
 		
 		workbook =new XSSFWorkbook(fis);
 		
@@ -55,8 +113,6 @@ public class ExcelUtills {
 		
 	}
 	
-	
-	
 	public static String getCellData(String xlfile, String sheet, int rownum, int celnum) throws IOException{
 		
 		fis = new FileInputStream(xlfile);
@@ -72,12 +128,9 @@ public class ExcelUtills {
 		fis.close();
 		return data;
 	}
-		
+	 */
 	
-	
-	
-	
-	
+
 	/*
 	public class ExcelUtils {
 		
