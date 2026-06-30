@@ -1,17 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-18T10:29:08 PDT" name="Default suite" finished-at="2026-06-18T10:29:08 PDT" duration-ms="288">
+  <suite started-at="2026-06-29T19:04:42 PDT" name="Suite" finished-at="2026-06-29T19:05:29 PDT" duration-ms="46680">
     <groups>
     </groups>
-    <test started-at="2026-06-18T10:29:08 PDT" name="Default test" finished-at="2026-06-18T10:29:08 PDT" duration-ms="288">
-      <class name="Utilities.ExcelUtils">
-        <test-method signature="ReadingDataFromExcell()[pri:0, instance:Utilities.ExcelUtils@3d74bf60]" started-at="2026-06-18T10:29:08 PDT" name="ReadingDataFromExcell" finished-at="2026-06-18T10:29:08 PDT" duration-ms="275" status="PASS">
+    <test started-at="2026-06-29T19:04:42 PDT" name="chromeTest" finished-at="2026-06-29T19:04:48 PDT" duration-ms="5503">
+      <class name="TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest@5fdcaa40]" started-at="2026-06-29T19:04:42 PDT" name="setUp" finished-at="2026-06-29T19:04:45 PDT" duration-ms="2434" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReadingDataFromExcell -->
-      </class> <!-- Utilities.ExcelUtils -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- setUp -->
+        <test-method signature="pgChecks()[pri:0, instance:TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest@5fdcaa40]" started-at="2026-06-29T19:04:45 PDT" name="pgChecks" finished-at="2026-06-29T19:04:48 PDT" duration-ms="2911" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pgChecks -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest@5fdcaa40]" started-at="2026-06-29T19:04:48 PDT" name="tearDown" finished-at="2026-06-29T19:04:48 PDT" duration-ms="100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest -->
+    </test> <!-- chromeTest -->
+    <test started-at="2026-06-29T19:04:42 PDT" name="firefoxTest" finished-at="2026-06-29T19:04:51 PDT" duration-ms="8265">
+      <class name="TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest@8f4ea7c]" started-at="2026-06-29T19:04:42 PDT" name="setUp" finished-at="2026-06-29T19:04:46 PDT" duration-ms="3472" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="pgChecks()[pri:0, instance:TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest@8f4ea7c]" started-at="2026-06-29T19:04:46 PDT" name="pgChecks" finished-at="2026-06-29T19:04:50 PDT" duration-ms="4505" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pgChecks -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest@8f4ea7c]" started-at="2026-06-29T19:04:50 PDT" name="tearDown" finished-at="2026-06-29T19:04:51 PDT" duration-ms="284" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest -->
+    </test> <!-- firefoxTest -->
+    <test started-at="2026-06-29T19:04:48 PDT" name="safariTest" finished-at="2026-06-29T19:05:29 PDT" duration-ms="41154">
+      <class name="TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest@74fe5c40]" started-at="2026-06-29T19:04:48 PDT" name="setUp" finished-at="2026-06-29T19:05:29 PDT" duration-ms="41142" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[safari]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Could not create a session: The session timed out while connecting to a Safari instance. The following asynchronous operation timed out: Finding or launching a compatible local Safari and waiting for its RWIApplication to appear and become ready. 
+Host info: host: 'Sais-MacBook-Pro-2.local', ip: '2600:381:5b0f:d68f:83a:3504:c1bf:c22%en0'
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.5.1', java.version: '25.0.2'
+Driver info: org.openqa.selenium.safari.SafariDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: safari}]}]
+Capabilities {browserName: safari}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not create a session: The session timed out while connecting to a Safari instance. The following asynchronous operation timed out: Finding or launching a compatible local Safari and waiting for its RWIApplication to appear and become ready. 
+Host info: host: 'Sais-MacBook-Pro-2.local', ip: '2600:381:5b0f:d68f:83a:3504:c1bf:c22%en0'
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.5.1', java.version: '25.0.2'
+Driver info: org.openqa.selenium.safari.SafariDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: safari}]}]
+Capabilities {browserName: safari}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:195)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:288)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:211)
+at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:89)
+at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:61)
+at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:57)
+at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:48)
+at TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest.setUp(TC_001_CrossBrowserParallelThreadSafetyTestNGTest.java:89)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:657)
+at org.testng.TestRunner.beforeRun(TestRunner.java:646)
+at org.testng.TestRunner.run(TestRunner.java:612)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+at java.base/java.lang.Thread.run(Thread.java:1474)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="pgChecks()[pri:0, instance:TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest@74fe5c40]" started-at="2026-06-29T19:05:29 PDT" name="pgChecks" finished-at="2026-06-29T19:05:29 PDT" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Could not create a session: The session timed out while connecting to a Safari instance. The following asynchronous operation timed out: Finding or launching a compatible local Safari and waiting for its RWIApplication to appear and become ready. 
+Host info: host: 'Sais-MacBook-Pro-2.local', ip: '2600:381:5b0f:d68f:83a:3504:c1bf:c22%en0'
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.5.1', java.version: '25.0.2'
+Driver info: org.openqa.selenium.safari.SafariDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: safari}]}]
+Capabilities {browserName: safari}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not create a session: The session timed out while connecting to a Safari instance. The following asynchronous operation timed out: Finding or launching a compatible local Safari and waiting for its RWIApplication to appear and become ready. 
+Host info: host: 'Sais-MacBook-Pro-2.local', ip: '2600:381:5b0f:d68f:83a:3504:c1bf:c22%en0'
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.5.1', java.version: '25.0.2'
+Driver info: org.openqa.selenium.safari.SafariDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: safari}]}]
+Capabilities {browserName: safari}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:195)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:288)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:211)
+at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:89)
+at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:61)
+at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:57)
+at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:48)
+at TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest.setUp(TC_001_CrossBrowserParallelThreadSafetyTestNGTest.java:89)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:657)
+at org.testng.TestRunner.beforeRun(TestRunner.java:646)
+at org.testng.TestRunner.run(TestRunner.java:612)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+at java.base/java.lang.Thread.run(Thread.java:1474)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pgChecks -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest@74fe5c40]" started-at="2026-06-29T19:05:29 PDT" name="tearDown" finished-at="2026-06-29T19:05:29 PDT" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestAutomationConcepts.TC_001_CrossBrowserParallelThreadSafetyTestNGTest -->
+    </test> <!-- safariTest -->
+  </suite> <!-- Suite -->
 </testng-results>

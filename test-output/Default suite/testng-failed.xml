@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="excercise.Misc_Tooltip">
+      <class name="TestAutomationConcepts.TC_001_ParallelTestingUsingDataProviderMethod">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="tooltip"/>
-          <include name="launchBrowser"/>
+          <include name="loginTest" invocation-numbers="1 2 4 5"/>
         </methods>
-      </class> <!-- excercise.Misc_Tooltip -->
+      </class> <!-- TestAutomationConcepts.TC_001_ParallelTestingUsingDataProviderMethod -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

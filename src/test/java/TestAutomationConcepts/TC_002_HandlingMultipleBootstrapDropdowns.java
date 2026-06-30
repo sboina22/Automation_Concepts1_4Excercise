@@ -16,7 +16,8 @@ public class TC_002_HandlingMultipleBootstrapDropdowns {
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.get("https://www.hdfc.bank.in/"); driver.manage().window().maximize();
+		driver.get("https://www.hdfc.bank.in/"); 
+		driver.manage().window().maximize();
 /*
 1. Click the dropdown button to make options visible
 driver.findElement(By.xpath("//div[@class=\"selector-wraplist productType option-box\"]/div")).click();

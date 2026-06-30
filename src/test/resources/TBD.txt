@@ -1,3 +1,7 @@
 Class Vs Interface
 Actions() Vs Action()
 Build() VS Perform()
+
+
+indices = {0,1}
+<suite name="Suite" data-provider-thread-count="2">

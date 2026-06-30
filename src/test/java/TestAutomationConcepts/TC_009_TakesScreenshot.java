@@ -23,7 +23,7 @@ public class TC_009_TakesScreenshot {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
-		//Take screenshot - Full page
+		//Take screenshot - Full page - by cast your driver instance to the TakesScreenshot interface
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File sourcefileFullscreen = ts.getScreenshotAs(OutputType.FILE); //getScreenshotAs() method call from TakesScreenshot Interface / on driver
 		File targetfileFullscreen = new File("./Screenshots/FullPageImage1.png");

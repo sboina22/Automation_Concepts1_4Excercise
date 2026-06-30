@@ -17,7 +17,7 @@ public class BaseTests {
 	public WebDriver driver;
 	public Properties prop = new Properties();
 
-	@BeforeTest
+	@BeforeClass
 	public void launchBrowser() throws IOException {
 
 		// Load the config.properties file using FileInputStream or FileReader to read the file contents
@@ -35,24 +35,18 @@ public class BaseTests {
 		System.out.println("Browser Name from BaseTests ==>   "+br);
 		System.out.println("URL from BaseTests ==>   "+url);
 
-		if (br.equalsIgnoreCase("chrome")) {
+		if (br.equalsIgnoreCase("Chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			driver.get(url);
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-			System.out.println("Browser Name from If..else ==>   "+br);
-			System.out.println("URL from If..else ==>   "+url);
-			
 		} else if (br.equalsIgnoreCase("Firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			driver.get(url);
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-			System.out.println("Browser Name from If..else ==>   "+br);
-			System.out.println("URL from If..else ==>   "+url);
-
 		} else if (br.equalsIgnoreCase("Edge")) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
@@ -61,16 +55,18 @@ public class BaseTests {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		} else {
-
-			System.out.println("Invalid browser name: ");
+			System.out.println("Invalid browser name ==> " + br);
+			return;
 		}
 
 	}
 
-	@AfterTest
-	public void closeBrowser() {
-		System.out.println("Browser closed.");
+	@AfterClass
+	public void tearDown() {
+		if(driver!=null) {
 		driver.quit();
+		System.out.println("Browser closed.");
+		}
 	}
 
 }

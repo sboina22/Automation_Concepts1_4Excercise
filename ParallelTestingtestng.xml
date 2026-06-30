@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test parallel="true" thread-count="2" name="Test1">
+		<classes>
+			<class name="TestAutomationConcepts.TC_001_ParallelClass1" />
+			<class name="TestAutomationConcepts.TC_001_ParallelClass3" />
+		</classes>
+	</test>
+
+	<test name="Test2">
+		<classes>
+			<class name="TestAutomationConcepts.TC_001_ParallelClass2" />
+		</classes>
+	</test>
+
+
+</suite> 
