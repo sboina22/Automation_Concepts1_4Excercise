@@ -36,10 +36,8 @@ public class TC_002_StaticDropdownsBySelectMethods {
 				 System.out.println("The selected option : " + option.getText());
 				 break;
 			 }
-		 }
-		
-		driver.close();
-		
+		 }	
+		driver.close();		
 	}
 
 }
