@@ -58,6 +58,7 @@ public class TC_001_CrossBrowserParallelThreadSafetyTestNGTest {
 		this.runningbrowser = browserName; // Save to class variable for use in @Test
 		
         // Use a localized variable inside the method scope to prevent cross-thread contamination
+		//Local (not global) instance variable 'WebDriver driver' to ensure strict thread safety and prevent cross-thread leaks during parallel execution.
 		WebDriver driver=null;
 		
 		if (browserName.equalsIgnoreCase("chrome")) {

@@ -41,18 +41,23 @@ public class BaseTests {
 			driver.get(url);
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			System.out.println("Current ThreadId >> "+Thread.currentThread().threadId() + " ; "+ "Current ThreadName >>  "+ Thread.currentThread().getName());	
+
 		} else if (br.equalsIgnoreCase("Firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			driver.get(url);
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			System.out.println("Current ThreadId >> "+Thread.currentThread().threadId() + " ; "+ "Current ThreadName >>  "+ Thread.currentThread().getName());	
+
 		} else if (br.equalsIgnoreCase("Edge")) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 			driver.get(url);
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			System.out.println("Current ThreadId >> "+Thread.currentThread().threadId() + " ; "+ "Current ThreadName >>  "+ Thread.currentThread().getName());	
 
 		} else {
 			System.out.println("Invalid browser name ==> " + br);
