@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestAutomationConcepts.TC_001_ParallelTestingUsingDataProviderMethod">
+      <class name="TestAutomationConcepts.TC_001_CrossBrowserAndParallelTestNGTest">
         <methods>
-          <include name="loginTest" invocation-numbers="1 2 4 5"/>
+          <include name="pgChecks"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- TestAutomationConcepts.TC_001_ParallelTestingUsingDataProviderMethod -->
+      </class> <!-- TestAutomationConcepts.TC_001_CrossBrowserAndParallelTestNGTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
