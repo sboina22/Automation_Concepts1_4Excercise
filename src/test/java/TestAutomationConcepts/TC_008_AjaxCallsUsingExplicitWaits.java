@@ -27,7 +27,6 @@ public class TC_008_AjaxCallsUsingExplicitWaits {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement elmText = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='ajaxContent']/h2")));
-		
 		System.out.println("Dynamic content displayed by Ajax Call ==> " + elmText.getText());
 		
 		driver.close();

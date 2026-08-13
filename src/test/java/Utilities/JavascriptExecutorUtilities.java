@@ -44,8 +44,6 @@ public class JavascriptExecutorUtilities {
 		js.executeScript("arguments[0].click();", element);
 	}
 
-
-
 	// Generate alert
 
 	public static void generateJSAlert(String message, WebDriver driver) {

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+	<!-- Define reusable properties like log file location -->
+	<Properties>
+		<Property name="basePath">./logs</Property>
+	</Properties>
+
+	<Appenders>
+		<!-- Console Appender -->
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+
+		<!-- Rolling File Appender (creates log files in base path with
+		timestamps) -->
+		<RollingFile name="File"
+			fileName="${basePath}/automation.log"
+			filePattern="${basePath}/automation-%d{yyyy-MM-dd-HH-mm-ss}.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+			<!-- Roll over file once it reaches 5000 KB (5 MB) -->
+			<SizeBasedTriggeringPolicy size="5000KB" />
+		</RollingFile>
+	</Appenders>
+
+	<Loggers>
+		<!-- Root Logger configuration -->
+		<Root level="info">
+			<!-- Uncomment to also send logs to Console -->
+			<AppenderRef ref="Console"/>
+			<AppenderRef ref="File" />
+		</Root>
+	</Loggers>
+
+</Configuration>
